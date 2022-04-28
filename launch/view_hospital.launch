@@ -1,5 +1,7 @@
 <launch>
+  <arg name="world_file" default="$(find aws_robomaker_hospital_world)/worlds/hospital.world"/>
   <include file="$(find aws_robomaker_hospital_world)/launch/hospital.launch">
     <arg name="gui" default="true"/>
+    <arg name="world_file" value="$(arg world_file)"/>
   </include>
 </launch>
